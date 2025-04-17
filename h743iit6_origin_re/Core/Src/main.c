@@ -134,8 +134,11 @@ int main(void)
 	HAL_GPIO_WritePin(LED_G_GPIO_Port,LED_G_Pin,0);
 		HAL_GPIO_WritePin(LED_B_GPIO_Port,LED_B_Pin,0);
   DM_4310_Register(&hfdcan2, 0x01, 0x00, pos_vel_mode);
+	 DM_4310_Register(&hfdcan2, 0x02, 0x03, pos_vel_mode);
   Enable_DM(DM_J4310_instnce[0]);
-	float debug_p;
+		HAL_Delay(10);
+	   Enable_DM(DM_J4310_instnce[1]);
+	float debug_p;                           
 	float debug_v;
 //	 DM_J4310_instnce[0]->dm_controller_instance.P_des=debug_p;
 //	 DM_J4310_instnce[0]->dm_controller_instance.V_des=debug_v; 
@@ -147,8 +150,12 @@ int main(void)
   {
 		 	 DM_J4310_instnce[0]->dm_controller_instance.P_des=debug_p;
 	 DM_J4310_instnce[0]->dm_controller_instance.V_des=debug_v; 
+			 	 DM_J4310_instnce[1]->dm_controller_instance.P_des=debug_p;
+	 DM_J4310_instnce[1]->dm_controller_instance.V_des=debug_v; 
 		Control_DM( DM_J4310_instnce[0]);
     HAL_Delay(10);
+		Control_DM( DM_J4310_instnce[1]);
+		 HAL_Delay(10);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -60,8 +60,8 @@ Section Cross References
     main.o(.text.main) refers to dm_j4310.o(.text.DM_4310_Register) for DM_4310_Register
     main.o(.text.main) refers to dm_j4310.o(.bss.DM_J4310_instnce) for DM_J4310_instnce
     main.o(.text.main) refers to dm_j4310.o(.text.Enable_DM) for Enable_DM
-    main.o(.text.main) refers to dm_j4310.o(.text.Control_DM) for Control_DM
     main.o(.text.main) refers to stm32h7xx_hal.o(.text.HAL_Delay) for HAL_Delay
+    main.o(.text.main) refers to dm_j4310.o(.text.Control_DM) for Control_DM
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
     main.o(.text.SystemClock_Config) refers to memseta.o(.text) for __aeabi_memclr4
     main.o(.text.SystemClock_Config) refers to stm32h7xx_hal_pwr_ex.o(.text.HAL_PWREx_ConfigSupply) for HAL_PWREx_ConfigSupply
@@ -5131,17 +5131,17 @@ Image Symbol Table
     __NVIC_SetPriorityGrouping               0x0800d6c9   Thumb Code    60  stm32h7xx_hal_cortex.o(.text.__NVIC_SetPriorityGrouping)
     [Anonymous Symbol]                       0x0800d6c8   Section        0  stm32h7xx_hal_cortex.o(.text.__NVIC_SetPriorityGrouping)
     [Anonymous Symbol]                       0x0800d708   Section        0  main.o(.text.main)
-    i.__scatterload_copy                     0x0800d802   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x0800d810   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x0800d812   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.malloc                                 0x0800d820   Section        0  malloc.o(i.malloc)
-    .L__const.HAL_FDCAN_Init.CvtEltSize      0x0800d88c   Data          76  stm32h7xx_hal_fdcan.o(.rodata..L__const.HAL_FDCAN_Init.CvtEltSize)
-    DLCtoBytes                               0x0800d8e8   Data          16  stm32h7xx_hal_fdcan.o(.rodata.DLCtoBytes)
-    [Anonymous Symbol]                       0x0800d8e8   Section        0  stm32h7xx_hal_fdcan.o(.rodata.DLCtoBytes)
-    UARTEx_SetNbDataToProcess.denominator    0x0800d8f8   Data           8  stm32h7xx_hal_uart_ex.o(.rodata.UARTEx_SetNbDataToProcess.denominator)
-    [Anonymous Symbol]                       0x0800d8f8   Section        0  stm32h7xx_hal_uart_ex.o(.rodata.UARTEx_SetNbDataToProcess.denominator)
-    UARTEx_SetNbDataToProcess.numerator      0x0800d900   Data           8  stm32h7xx_hal_uart_ex.o(.rodata.UARTEx_SetNbDataToProcess.numerator)
-    [Anonymous Symbol]                       0x0800d900   Section        0  stm32h7xx_hal_uart_ex.o(.rodata.UARTEx_SetNbDataToProcess.numerator)
+    i.__scatterload_copy                     0x0800d840   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0800d84e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0800d850   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.malloc                                 0x0800d860   Section        0  malloc.o(i.malloc)
+    .L__const.HAL_FDCAN_Init.CvtEltSize      0x0800d8cc   Data          76  stm32h7xx_hal_fdcan.o(.rodata..L__const.HAL_FDCAN_Init.CvtEltSize)
+    DLCtoBytes                               0x0800d928   Data          16  stm32h7xx_hal_fdcan.o(.rodata.DLCtoBytes)
+    [Anonymous Symbol]                       0x0800d928   Section        0  stm32h7xx_hal_fdcan.o(.rodata.DLCtoBytes)
+    UARTEx_SetNbDataToProcess.denominator    0x0800d938   Data           8  stm32h7xx_hal_uart_ex.o(.rodata.UARTEx_SetNbDataToProcess.denominator)
+    [Anonymous Symbol]                       0x0800d938   Section        0  stm32h7xx_hal_uart_ex.o(.rodata.UARTEx_SetNbDataToProcess.denominator)
+    UARTEx_SetNbDataToProcess.numerator      0x0800d940   Data           8  stm32h7xx_hal_uart_ex.o(.rodata.UARTEx_SetNbDataToProcess.numerator)
+    [Anonymous Symbol]                       0x0800d940   Section        0  stm32h7xx_hal_uart_ex.o(.rodata.UARTEx_SetNbDataToProcess.numerator)
     .data                                    0x24000000   Section        4  mvars.o(.data)
     .data                                    0x24000004   Section        4  mvars.o(.data)
     FDCANAddFilter.fdcan2_filter_idx         0x24000008   Data           1  bsp_fdcan.o(.data.FDCANAddFilter.fdcan2_filter_idx)
@@ -5499,15 +5499,15 @@ Image Symbol Table
     USB_SetCurrentMode                       0x0800d531   Thumb Code   222  stm32h7xx_ll_usb.o(.text.USB_SetCurrentMode)
     USB_SetDevSpeed                          0x0800d611   Thumb Code    34  stm32h7xx_ll_usb.o(.text.USB_SetDevSpeed)
     UsageFault_Handler                       0x0800d639   Thumb Code     4  stm32h7xx_it.o(.text.UsageFault_Handler)
-    main                                     0x0800d709   Thumb Code   250  main.o(.text.main)
-    __scatterload_copy                       0x0800d803   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x0800d811   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x0800d813   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    malloc                                   0x0800d821   Thumb Code    92  malloc.o(i.malloc)
-    D1CorePrescTable                         0x0800d8d8   Data          16  system_stm32h7xx.o(.rodata.D1CorePrescTable)
-    UARTPrescTable                           0x0800d908   Data          24  stm32h7xx_hal_uart.o(.rodata.UARTPrescTable)
-    Region$$Table$$Base                      0x0800d920   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800d940   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x0800d709   Thumb Code   312  main.o(.text.main)
+    __scatterload_copy                       0x0800d841   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0800d84f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0800d851   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    malloc                                   0x0800d861   Thumb Code    92  malloc.o(i.malloc)
+    D1CorePrescTable                         0x0800d918   Data          16  system_stm32h7xx.o(.rodata.D1CorePrescTable)
+    UARTPrescTable                           0x0800d948   Data          24  stm32h7xx_hal_uart.o(.rodata.UARTPrescTable)
+    Region$$Table$$Base                      0x0800d960   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800d980   Number         0  anon$$obj.o(Region$$Table)
     __microlib_freelist                      0x24000000   Data           4  mvars.o(.data)
     __microlib_freelist_initialised          0x24000004   Data           4  mvars.o(.data)
     SystemCoreClock                          0x2400000c   Data           4  system_stm32h7xx.o(.data.SystemCoreClock)
@@ -5559,9 +5559,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000299
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000d960, Max: 0x00200000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000d9a0, Max: 0x00200000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000d940, Max: 0x00200000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000d980, Max: 0x00200000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -5925,42 +5925,43 @@ Memory Map of the image
     0x0800d6c2   0x0800d6c2   0x00000006   PAD
     0x0800d6c8   0x0800d6c8   0x0000003c   Code   RO         1018    .text.__NVIC_SetPriorityGrouping  stm32h7xx_hal_cortex.o
     0x0800d704   0x0800d704   0x00000004   PAD
-    0x0800d708   0x0800d708   0x000000fa   Code   RO           11    .text.main          main.o
-    0x0800d802   0x0800d802   0x0000000e   Code   RO         2717    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800d810   0x0800d810   0x00000002   Code   RO         2718    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0800d812   0x0800d812   0x0000000e   Code   RO         2719    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0800d820   0x0800d820   0x0000006c   Code   RO         2666    i.malloc            mc_w.l(malloc.o)
-    0x0800d88c   0x0800d88c   0x0000004c   Data   RO         1704    .rodata..L__const.HAL_FDCAN_Init.CvtEltSize  stm32h7xx_hal_fdcan.o
-    0x0800d8d8   0x0800d8d8   0x00000010   Data   RO         2593    .rodata.D1CorePrescTable  system_stm32h7xx.o
-    0x0800d8e8   0x0800d8e8   0x00000010   Data   RO         1705    .rodata.DLCtoBytes  stm32h7xx_hal_fdcan.o
-    0x0800d8f8   0x0800d8f8   0x00000008   Data   RO         1898    .rodata.UARTEx_SetNbDataToProcess.denominator  stm32h7xx_hal_uart_ex.o
-    0x0800d900   0x0800d900   0x00000008   Data   RO         1897    .rodata.UARTEx_SetNbDataToProcess.numerator  stm32h7xx_hal_uart_ex.o
-    0x0800d908   0x0800d908   0x00000018   Data   RO         1853    .rodata.UARTPrescTable  stm32h7xx_hal_uart.o
-    0x0800d920   0x0800d920   0x00000020   Data   RO         2716    Region$$Table       anon$$obj.o
+    0x0800d708   0x0800d708   0x00000138   Code   RO           11    .text.main          main.o
+    0x0800d840   0x0800d840   0x0000000e   Code   RO         2717    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800d84e   0x0800d84e   0x00000002   Code   RO         2718    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0800d850   0x0800d850   0x0000000e   Code   RO         2719    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800d85e   0x0800d85e   0x00000002   PAD
+    0x0800d860   0x0800d860   0x0000006c   Code   RO         2666    i.malloc            mc_w.l(malloc.o)
+    0x0800d8cc   0x0800d8cc   0x0000004c   Data   RO         1704    .rodata..L__const.HAL_FDCAN_Init.CvtEltSize  stm32h7xx_hal_fdcan.o
+    0x0800d918   0x0800d918   0x00000010   Data   RO         2593    .rodata.D1CorePrescTable  system_stm32h7xx.o
+    0x0800d928   0x0800d928   0x00000010   Data   RO         1705    .rodata.DLCtoBytes  stm32h7xx_hal_fdcan.o
+    0x0800d938   0x0800d938   0x00000008   Data   RO         1898    .rodata.UARTEx_SetNbDataToProcess.denominator  stm32h7xx_hal_uart_ex.o
+    0x0800d940   0x0800d940   0x00000008   Data   RO         1897    .rodata.UARTEx_SetNbDataToProcess.numerator  stm32h7xx_hal_uart_ex.o
+    0x0800d948   0x0800d948   0x00000018   Data   RO         1853    .rodata.UARTPrescTable  stm32h7xx_hal_uart.o
+    0x0800d960   0x0800d960   0x00000020   Data   RO         2716    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800d940, Size: 0x00000000, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800d980, Size: 0x00000000, Max: 0x00020000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x24000000, Load base: 0x0800d940, Size: 0x00002b30, Max: 0x00080000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x24000000, Load base: 0x0800d980, Size: 0x00002b30, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x24000000   0x0800d940   0x00000004   Data   RW         2711    .data               mc_w.l(mvars.o)
-    0x24000004   0x0800d944   0x00000004   Data   RW         2712    .data               mc_w.l(mvars.o)
-    0x24000008   0x0800d948   0x00000001   Data   RW         2622    .data.FDCANAddFilter.fdcan2_filter_idx  bsp_fdcan.o
-    0x24000009   0x0800d949   0x00000003   PAD
-    0x2400000c   0x0800d94c   0x00000004   Data   RW         2591    .data.SystemCoreClock  system_stm32h7xx.o
-    0x24000010   0x0800d950   0x00000004   Data   RW         2592    .data.SystemD2Clock  system_stm32h7xx.o
-    0x24000014   0x0800d954   0x00000001   Data   RW         1190    .data.uwTickFreq    stm32h7xx_hal.o
-    0x24000015   0x0800d955   0x00000003   PAD
-    0x24000018   0x0800d958   0x00000004   Data   RW         1189    .data.uwTickPrio    stm32h7xx_hal.o
-    0x2400001c   0x0800d95c   0x00000004   PAD
+    0x24000000   0x0800d980   0x00000004   Data   RW         2711    .data               mc_w.l(mvars.o)
+    0x24000004   0x0800d984   0x00000004   Data   RW         2712    .data               mc_w.l(mvars.o)
+    0x24000008   0x0800d988   0x00000001   Data   RW         2622    .data.FDCANAddFilter.fdcan2_filter_idx  bsp_fdcan.o
+    0x24000009   0x0800d989   0x00000003   PAD
+    0x2400000c   0x0800d98c   0x00000004   Data   RW         2591    .data.SystemCoreClock  system_stm32h7xx.o
+    0x24000010   0x0800d990   0x00000004   Data   RW         2592    .data.SystemD2Clock  system_stm32h7xx.o
+    0x24000014   0x0800d994   0x00000001   Data   RW         1190    .data.uwTickFreq    stm32h7xx_hal.o
+    0x24000015   0x0800d995   0x00000003   PAD
+    0x24000018   0x0800d998   0x00000004   Data   RW         1189    .data.uwTickPrio    stm32h7xx_hal.o
+    0x2400001c   0x0800d99c   0x00000004   PAD
     0x24000020        -       0x00000010   Zero   RW         2646    .bss.DM_J4310_instnce  dm_j4310.o
     0x24000030        -       0x00000001   Zero   RW         2621    .bss.FDCANAddFilter.fdcan1_filter_idx  bsp_fdcan.o
-    0x24000031   0x0800d95c   0x00000003   PAD
+    0x24000031   0x0800d99c   0x00000003   PAD
     0x24000034        -       0x00000028   Zero   RW         2624    .bss.FDCANFIFOxCallback.rxconf  bsp_fdcan.o
     0x2400005c        -       0x00000004   Zero   RW         2619    .bss.FDCANTransmit.busy_count  bsp_fdcan.o
     0x24000060        -       0x00000004   Zero   RW           76    .bss.HAL_RCC_FDCAN_CLK_ENABLED  fdcan.o
@@ -5998,9 +5999,9 @@ Memory Map of the image
     0x240011fc        -       0x00000094   Zero   RW          132    .bss.huart7         usart.o
     0x24001290        -       0x00000094   Zero   RW          133    .bss.huart8         usart.o
     0x24001324        -       0x00000001   Zero   RW         2617    .bss.idx            bsp_fdcan.o
-    0x24001325   0x0800d95c   0x00000003   PAD
+    0x24001325   0x0800d99c   0x00000003   PAD
     0x24001328        -       0x00000004   Zero   RW         1191    .bss.uwTick         stm32h7xx_hal.o
-    0x2400132c   0x0800d95c   0x00000004   PAD
+    0x2400132c   0x0800d99c   0x00000004   PAD
     0x24001330        -       0x00001000   Zero   RW            2    HEAP                startup_stm32h743xx.o
     0x24002330        -       0x00000800   Zero   RW            1    STACK               startup_stm32h743xx.o
 
@@ -6019,7 +6020,7 @@ Image component sizes
        636          0          0          0        324      11608   fdcan.o
        616          0          0          0          0       3222   gpio.o
       1136          0          0          0        336       9057   i2c.o
-       570          0          0          0          0       5243   main.o
+       632          0          0          0          0       5292   main.o
       1724          0          0          0        816      10106   spi.o
         44         12        664          0       6144        864   startup_stm32h743xx.o
        404          0          0          5          4      13789   stm32h7xx_hal.o
@@ -6050,7 +6051,7 @@ Image component sizes
        242          0          0          0       1252       7361   usb_otg.o
 
     ----------------------------------------------------------------------
-     54334        496        844         20      11028     466503   Object Totals
+     54396        496        844         20      11028     466552   Object Totals
          0          0         32          0          0          0   (incl. Generated)
        582         12          0          6         14          0   (incl. Padding)
 
@@ -6077,8 +6078,8 @@ Image component sizes
         98          0          0          0          0         92   uldiv.o
 
     ----------------------------------------------------------------------
-       438         34          0          8          0        556   Library Totals
-         0          0          0          0          0          0   (incl. Padding)
+       440         34          0          8          0        556   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -6087,7 +6088,7 @@ Image component sizes
        438         34          0          8          0        556   mc_w.l
 
     ----------------------------------------------------------------------
-       438         34          0          8          0        556   Library Totals
+       440         34          0          8          0        556   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -6096,15 +6097,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     54772        530        844         28      11028     466375   Grand Totals
-     54772        530        844         28      11028     466375   ELF Image Totals
-     54772        530        844         28          0          0   ROM Totals
+     54836        530        844         28      11028     466424   Grand Totals
+     54836        530        844         28      11028     466424   ELF Image Totals
+     54836        530        844         28          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                55616 (  54.31kB)
+    Total RO  Size (Code + RO Data)                55680 (  54.38kB)
     Total RW  Size (RW Data + ZI Data)             11056 (  10.80kB)
-    Total ROM Size (Code + RO Data + RW Data)      55644 (  54.34kB)
+    Total ROM Size (Code + RO Data + RW Data)      55708 (  54.40kB)
 
 ==============================================================================
 
