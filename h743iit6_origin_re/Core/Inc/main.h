@@ -65,10 +65,16 @@ void Error_Handler(void);
 #define SLEEP2_GPIO_Port GPIOC
 #define PH_2_Pin GPIO_PIN_3
 #define PH_2_GPIO_Port GPIOH
+#define LED_G_Pin GPIO_PIN_13
+#define LED_G_GPIO_Port GPIOE
+#define LED_B_Pin GPIO_PIN_14
+#define LED_B_GPIO_Port GPIOE
 #define TFT_RS_Pin GPIO_PIN_3
 #define TFT_RS_GPIO_Port GPIOD
 #define TFT_RST_Pin GPIO_PIN_4
 #define TFT_RST_GPIO_Port GPIOD
+#define TFT_CS_Pin GPIO_PIN_5
+#define TFT_CS_GPIO_Port GPIOD
 #define SPI1_CS_Pin GPIO_PIN_10
 #define SPI1_CS_GPIO_Port GPIOG
 #define SPI3_CS_Pin GPIO_PIN_15

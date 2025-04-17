@@ -10,6 +10,7 @@
 "begin\memorymap.o"
 "begin\spi.o"
 "begin\tim.o"
+"begin\usb_otg.o"
 "begin\stm32h7xx_it.o"
 "begin\stm32h7xx_hal_msp.o"
 "begin\stm32h7xx_hal_adc.o"
@@ -39,7 +40,11 @@
 "begin\stm32h7xx_hal_spi_ex.o"
 "begin\stm32h7xx_hal_tim.o"
 "begin\stm32h7xx_hal_tim_ex.o"
+"begin\stm32h7xx_hal_pcd.o"
+"begin\stm32h7xx_hal_pcd_ex.o"
+"begin\stm32h7xx_ll_usb.o"
 "begin\system_stm32h7xx.o"
+"begin\bsp_fdcan.o"
 --library_type=microlib --strict --scatter "begin\begin.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -35,6 +35,10 @@ begin/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
   ..\Core\Inc\adc.h ..\Core\Inc\dac.h ..\Core\Inc\fdcan.h \
   ..\Core\Inc\i2c.h ..\Core\Inc\usart.h ..\Core\Inc\memorymap.h \
-  ..\Core\Inc\spi.h ..\Core\Inc\tim.h ..\Core\Inc\gpio.h
+  ..\Core\Inc\spi.h ..\Core\Inc\tim.h ..\Core\Inc\usb_otg.h \
+  ..\Core\Inc\gpio.h
