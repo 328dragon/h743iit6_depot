@@ -45,6 +45,7 @@
 "begin\stm32h7xx_ll_usb.o"
 "begin\system_stm32h7xx.o"
 "begin\bsp_fdcan.o"
+"begin\dm_j4310.o"
 --library_type=microlib --strict --scatter "begin\begin.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

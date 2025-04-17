@@ -1,4 +1,5 @@
-begin/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
+begin/dm_j4310.o: ..\mcu_bsp\Motor\dm_j4310.c ..\mcu_bsp\Motor\dm_j4310.h \
+  ..\mcu_bsp\Motor\motor_def.h ..\Core\Inc\fdcan.h ..\Core\Inc\main.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
   ..\Core\Inc\stm32h7xx_hal_conf.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h \
@@ -38,8 +39,4 @@ begin/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
-  ..\Core\Inc\adc.h ..\Core\Inc\dac.h ..\Core\Inc\fdcan.h \
-  ..\Core\Inc\i2c.h ..\Core\Inc\usart.h ..\Core\Inc\memorymap.h \
-  ..\Core\Inc\spi.h ..\Core\Inc\tim.h ..\Core\Inc\usb_otg.h \
-  ..\Core\Inc\gpio.h ..\mcu_bsp\Motor\dm_j4310.h \
-  ..\mcu_bsp\Motor\motor_def.h ..\mcu_bsp\fdcan\bsp_fdcan.h
+  ..\mcu_bsp\fdcan\bsp_fdcan.h

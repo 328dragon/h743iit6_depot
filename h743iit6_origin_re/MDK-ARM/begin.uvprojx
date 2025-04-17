@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_PWR_LDO_SUPPLY,USE_HAL_DRIVER,STM32H743xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../BSP/Inc;../mcu_bsp/fdcan</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../BSP/Inc;../mcu_bsp/fdcan;../mcu_bsp/Motor</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1755,6 +1755,11 @@
               <FileName>bsp_fdcan.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\mcu_bsp\fdcan\bsp_fdcan.c</FilePath>
+            </File>
+            <File>
+              <FileName>dm_j4310.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mcu_bsp\Motor\dm_j4310.c</FilePath>
             </File>
           </Files>
         </Group>

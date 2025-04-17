@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "bsp_fdcan.h": "c"
+        "bsp_fdcan.h": "c",
+        "dm_j4310.h": "c"
     }
 }

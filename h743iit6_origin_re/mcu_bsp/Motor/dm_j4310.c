@@ -15,7 +15,7 @@ int16_t FloatToI16(float value, float min, float max, int bits)
     return (int16_t)((value - min) * ((1 << bits) - 1) / range - (1 << (bits - 1)));
 }
 
-void DM_J4310_Get_Info(CANInstance *can_instance)
+void DM_J4310_Get_Info(FDCANInstance *can_instance)
 {
     uint8_t data[8] = {0};
     memcpy(data, can_instance->rx_buff, 8);
@@ -48,7 +48,7 @@ void DM_J4310_Get_Info(CANInstance *can_instance)
     ((DM_J4310_Controller_t *)(can_instance->id))->dm_imfo_instance.T_Rotor = t_rotor;
 }
 
-void DM_4310_Register(CAN_HandleTypeDef *hcan, uint32_t protocol_id, uint32_t mst_id, uint16_t w_mode)
+void DM_4310_Register(FDCAN_HandleTypeDef *hfdcan, uint32_t protocol_id, uint32_t mst_id, uint16_t w_mode)
 {
     DM_J4310_Controller_t *DM_J4310_s = (DM_J4310_Controller_t *)malloc(sizeof(DM_J4310_Controller_t));
     memset(DM_J4310_s, 0, sizeof(DM_J4310_Controller_t));
@@ -62,14 +62,14 @@ void DM_4310_Register(CAN_HandleTypeDef *hcan, uint32_t protocol_id, uint32_t ms
     else if (w_mode == vel_mode)
         DM_J4310_s->mode_trans_id = protocol_id + 0x200;
 
-    CAN_Init_Config_s can_instance_config = {0};
-    can_instance_config.can_handle = hcan;
-    can_instance_config.tx_id = DM_J4310_s->mode_trans_id;
-    can_instance_config.rx_id = mst_id;             // 返回帧id
-    can_instance_config.can_module_callback = NULL; // 这里可以设置回调函数,但是目前没有用到
-    can_instance_config.id = DM_J4310_s;
+    FDCAN_Init_Config_s fdcan_instance_config = {0};
+    fdcan_instance_config.fdcan_handle = hfdcan;
+    fdcan_instance_config.tx_id = DM_J4310_s->mode_trans_id;
+    fdcan_instance_config.rx_id = mst_id;             // 返回帧id
+    fdcan_instance_config.fdcan_module_callback = NULL; // 这里可以设置回调函数,但是目前没有用到
+    fdcan_instance_config.id = DM_J4310_s;
 
-    DM_J4310_s->can_instance = CANRegister(&can_instance_config); // 注册CAN实例
+    DM_J4310_s->can_instance = FDCANRegister(&fdcan_instance_config); // 注册CAN实例
 
     DM_J4310_instnce[dm_idx++] = DM_J4310_s;
 }
@@ -103,7 +103,7 @@ void Enable_DM(DM_J4310_Controller_t *dm_j4310_instance)
     motor_data[6] = 0xFF;                                            // 使能电机
     motor_data[7] = 0xFC;                                            // 使能电机
     memcpy(dm_j4310_instance->can_instance->tx_buff, motor_data, 8); // 将数据拷贝到CAN实例的发送缓存中
-    CANTransmit(dm_j4310_instance->can_instance);                    // 发送数据
+    FDCANTransmit(dm_j4310_instance->can_instance);                    // 发送数据
 }
 void Control_DM(DM_J4310_Controller_t *dm_j4310_instance)
 {
@@ -155,5 +155,5 @@ void Control_DM(DM_J4310_Controller_t *dm_j4310_instance)
     }
 
     memcpy(dm_j4310_instance->can_instance->tx_buff, motor_data, 8); // 将数据拷贝到CAN实例的发送缓存中
-    CANTransmit(dm_j4310_instance->can_instance);                    // 发送数据
+    FDCANTransmit(dm_j4310_instance->can_instance);                    // 发送数据
 }

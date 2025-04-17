@@ -37,7 +37,7 @@ typedef struct
     uint32_t tx_id;                             // 发送id
     uint32_t rx_id;                             // 接收id
     void (*fdcan_module_callback)(FDCANInstance *); // 处理接收数据的回调函数
-    void *pe_id;                                   // 拥有can实例的模块地址,用于区分不同的模块(如果有需要的话),如果不需要可以不传入(目前用不到)
+    void *id;                                   // 拥有can实例的模块地址,用于区分不同的模块(如果有需要的话),如果不需要可以不传入(目前用不到)
 } FDCAN_Init_Config_s;
 
 /**
@@ -65,5 +65,5 @@ void FDCANSetDLC(FDCANInstance *_instance, uint8_t length);
  * @param timeout 超时时间,单位为ms;后续改为us,获得更精确的控制
  * @param _instance* can instance owned by module
  */
-uint8_t FDCANTransmit(FDCANInstance *_instance,float timeout);
+uint8_t FDCANTransmit(FDCANInstance *_instance);
 #endif

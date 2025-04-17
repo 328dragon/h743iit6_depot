@@ -109,8 +109,8 @@ FDCANInstance *FDCANRegister(FDCAN_Init_Config_s *config)
     instance->tx_id = config->tx_id; // 好像没用,可以删掉
     instance->rx_id = config->rx_id;
     instance->fdcan_module_callback = config->fdcan_module_callback;
-    instance->id = config->pe_id;	   //模块id,没啥用
- FDCANAddFilter(instance);         // 添加CAN过滤器规则
+    instance->id = config->id;	   //模块id,没啥用
+    FDCANAddFilter(instance);         // 添加CAN过滤器规则
     fdcan_instance[idx++] = instance; // 将实例保存到can_instance中
 
     return instance; // 返回can实例指针
@@ -118,7 +118,7 @@ FDCANInstance *FDCANRegister(FDCAN_Init_Config_s *config)
 
 /* @todo 目前似乎封装过度,应该添加一个指向tx_buff的指针,tx_buff不应该由CAN instance保存 */
 /* 如果让CANinstance保存txbuff,会增加一次复制的开销 */
-uint8_t FDCANTransmit(FDCANInstance *_instance, float timeout)
+uint8_t FDCANTransmit(FDCANInstance *_instance)
 {
     static uint32_t busy_count;
     static volatile float wait_time __attribute__((unused)); // for cancel warning

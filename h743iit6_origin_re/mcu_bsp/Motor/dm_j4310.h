@@ -3,8 +3,8 @@
 
 #include "stdint.h"
 #include "motor_def.h"
-#include "can.h"
-#include "bsp_can.h"
+#include "fdcan.h"
+#include "bsp_fdcan.h"
 #define DM_J4310_NUM 4 // dm_j4310实例数量,根据实际需要修改
 
 typedef enum
@@ -49,15 +49,15 @@ typedef struct dm_j4310_t
     uint32_t protocol_id;         // 协议id
     uint32_t mode_trans_id;       // 工作模式id,用于区分不同的工作模式
     DM_J4310_Working_MODE_e mode; // 电机工作模式
-    CANInstance *can_instance;
+    FDCANInstance *can_instance;
     DM_Info_t dm_imfo_instance;                  // dm电机特殊返回数据(信息类)
     DM_Controller_Struct dm_controller_instance; // dm电机控制器数据
     Motor_Controller_struct motor_instnce;
 } DM_J4310_Controller_t;
 
 extern DM_J4310_Controller_t *DM_J4310_instnce[DM_J4310_NUM] ;
-void DM_J4310_Get_Info(CANInstance *can_instance);
-void DM_4310_Register(CAN_HandleTypeDef *hcan, uint32_t protocol_id, uint32_t mst_id, uint16_t w_mode);
+void DM_J4310_Get_Info(FDCANInstance *can_instance);
+void DM_4310_Register(FDCAN_HandleTypeDef *hcan, uint32_t protocol_id, uint32_t mst_id, uint16_t w_mode);
 void DM_Change_Mode(DM_J4310_Controller_t *dm_j4310_instance, uint8_t to_mode);
 void Enable_DM(DM_J4310_Controller_t *dm_j4310_instance);
 void Control_DM(DM_J4310_Controller_t *dm_j4310_instance);
